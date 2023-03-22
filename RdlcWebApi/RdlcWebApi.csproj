@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ReportFiles\HojaMembretada_es.rdlc" />
     <None Remove="ReportFiles\Report.rdlc" />
     <None Remove="ReportFiles\UserDetails.rdlc" />
     <None Remove="ReportFiles\UserDetails_en.rdlc" />
@@ -15,6 +16,9 @@
 
   <ItemGroup>
     <Content Include="ReportFiles\Report.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReportFiles\HojaMembretada_es.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ReportFiles\UserDetails_en.rdlc">
