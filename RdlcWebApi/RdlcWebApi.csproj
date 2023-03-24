@@ -6,31 +6,31 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="ReportFiles\HojaMembretada_es.rdlc" />
-    <None Remove="ReportFiles\Report.rdlc" />
-    <None Remove="ReportFiles\UserDetails.rdlc" />
-    <None Remove="ReportFiles\UserDetails_en.rdlc" />
-    <None Remove="ReportFiles\UserDetails_hi.rdlc" />
-    <None Remove="ReportFiles\UserDetails_ta.rdlc" />
+    <None Remove="ReportFiles\Residencias_Aceptacion.rdlc" />
+    <None Remove="ReportFiles\Residencias_Anexo29.rdlc" />
+    <None Remove="ReportFiles\Residencias_Anexo30.rdlc" />
+    <None Remove="ReportFiles\Residencias_Finalizacion.rdlc" />
+    <None Remove="ReportFiles\Servicio_Aceptacion.rdlc" />
+    <None Remove="ReportFiles\Servicio_Finalizacion.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="ReportFiles\Report.rdlc">
+    <Content Include="ReportFiles\Servicio_Aceptacion.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="ReportFiles\HojaMembretada_es.rdlc">
+    <Content Include="ReportFiles\Residencias_Anexo30.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="ReportFiles\UserDetails_en.rdlc">
+    <Content Include="ReportFiles\Residencias_Anexo29.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="ReportFiles\UserDetails_hi.rdlc">
+    <Content Include="ReportFiles\Residencias_Finalizacion.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="ReportFiles\UserDetails_ta.rdlc">
+    <Content Include="ReportFiles\Residencias_Aceptacion.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="ReportFiles\UserDetails.rdlc">
+    <Content Include="ReportFiles\Servicio_Finalizacion.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

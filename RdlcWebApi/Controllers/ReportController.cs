@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RdlcWebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("procedure/print")]
     [ApiController]
     public class ReportController : ControllerBase
     {
@@ -20,33 +20,18 @@ namespace RdlcWebApi.Controllers
             _reportService = reportService;
         }
 
-        [HttpGet("{reportName}/{reportType}/{lang}")]
-        public ActionResult Get(string reportName, string reportType, string lang)
+        [HttpGet("{type}/{subType}/{data}")]
+        public ActionResult Get(string type, string subType, string data)
         {
-            var reportNameWithLang = reportName + "_" + lang;
-            var reportFileByteString = _reportService.GenerateReportAsync(reportNameWithLang, reportType);
-            return File(reportFileByteString, MediaTypeNames.Application.Octet, getReportName(reportNameWithLang, reportType));
+            var reportNameWithLang = type + "_" + subType;
+            var reportFileByteString = _reportService.GenerateReportAsync(type, subType, data);
+            return File(reportFileByteString, MediaTypeNames.Application.Octet, getReportName(reportNameWithLang, ".pdf"));
         }
 
 
-        private string getReportName(string reportName, string reportType)
+        private string getReportName(string type, string subType)
         {
-            var outputFileName = reportName + ".pdf";
-
-            switch (reportType.ToUpper())
-            {
-                default:
-                case "PDF":
-                    outputFileName = reportName + ".pdf";
-                    break;
-                case "XLS":
-                    outputFileName = reportName + ".xls";
-                    break;
-                case "WORD":
-                    outputFileName = reportName + ".doc";
-                    break;
-            }
-
+            var outputFileName = type + subType + ".pdf";
             return outputFileName;
         }
 
